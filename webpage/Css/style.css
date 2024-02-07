@@ -1,0 +1,189 @@
+/* Base Styles */
+:root {
+    --primary-color: #134266; /* Dark Blue */
+    --secondary-color: #3ca4c8; /* Light Blue */
+    --accent-color: #e7b7b0; /* Light Coral */
+    --text-color: #fff; /* White for high contrast */
+    --background-color: #f0f0f0; /* Light background */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+body.darkmode p {
+    color: rgb(255, 234, 234);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: rgb(36, 33, 33);
+}
+
+a, .accent {
+    font-family: 'Merriweather', serif;
+    color: var(--accent-color);
+}
+
+/* Banner Styles */
+
+#banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Styles */
+#menuBar {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuBar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+#menuBar li {
+    margin: 0 10px;
+}
+
+#menuBar a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#accessibilitySettings i,
+#menuToggle i {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#accessibilitySettingsContainer {
+    position: relative; /* Container to hold both settings icon and the panel */
+}
+
+#accessibilitySettings {
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align icon and text */
+}
+
+#accessibilitySettings i {
+    margin-right: 5px; /* Add some spacing between icon and text */
+}
+
+#accessibilitySettings span {
+    display: none; /* Hide the text by default */
+    color: var(--text-color);
+}
+
+#accessibilitySettings:hover span {
+    display: inline; /* Show text on hover */
+}
+
+#darkModeSwitch {
+    display: none; /* This will be shown when the cog is clicked */
+    position: absolute;
+    right: 0; /* Align the switch to the right side of the container */
+    top: 100%; /* Position it below the settings icon */
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+/* Section Layouts */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align sections */
+    padding: 20px;
+}
+
+section {
+    width: 31%; /* Adjusted width for clear staggered effect */
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 35px; /* Rounded corners */
+}
+
+section:nth-child(odd) {
+    padding-left: 50px;
+    padding-right: 25px;
+    transform: translateX(-5%); /* Slightly shift odd sections to the left */
+    margin-right: 25%;
+    box-shadow: 10px 4px 8px rgba(0.5,0.5,0.5,0.5);
+}
+
+section:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 25px;
+    transform: translateX(5%); /* Slightly shift even sections to the right */
+    margin-left: 25%;
+    box-shadow: -10px 4px 8px rgba(0.5,0.5,0.5,0.5);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode #menuBar {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode a {
+    color: var(--accent-color);
+}
+
+body.dark-mode section {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+body.dark-mode section:nth-child(odd) {
+    box-shadow: 10px 10px 3px rgba(255, 255, 255, 0.4);
+}
+
+body.dark-mode section:nth-child(even) {
+    box-shadow: -10px 10px 3px rgba(255, 255, 255, 0.4);
+}
+.switch {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menuBar ul {
+        flex-direction: column;
+    }
+
+    section {
+        width: 90%; /* Full width on smaller screens */
+        transform: none; /* Remove stagger effect on smaller screens for readability */
+    }
+
+    #darkModeSwitch {
+        top: auto;
+        bottom: 10px;
+    }
+}
