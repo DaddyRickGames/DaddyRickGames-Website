@@ -18,7 +18,7 @@ body {
 }
 
 body.darkmode p {
-    color: rgb(255, 234, 234);
+    color: rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4, h5, h6 {

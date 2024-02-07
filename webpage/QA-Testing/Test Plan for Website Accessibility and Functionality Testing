@@ -27,7 +27,7 @@
         Make sure the text for Dark Mode is sitting correctly in comparison to where it opens at.
 
 3. Features to be Tested
-    Color contrast ratios against WCAG 2.1 Guidelines
+    Color contrast ratios against WCAG 2.2 Guidelines
     Readability of text and visibility of UI elements in different color modes.
     Menu bar visibility, interactivity, and navigation efficiency
     Dark mode and light mode switching functionality and effect on website aesthetics and readability
