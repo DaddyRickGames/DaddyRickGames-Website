@@ -1,0 +1,79 @@
+1. Introduction
+    This test plan outlines the approach for verifying the website's accessible color system, menu bar functionality, and dark mode switch. It aims to ensure these features are implemented correctly to enhance user experience and accessibility.
+
+2. Test Items
+    Accessible Color System: 
+        Ensures the website uses color schemes that provide sufficient 
+        contrast and are accessible to users with visual impairments.
+        Checking if in Light Mode these colors are accessible.
+        #134266 Dark Blue
+        #3ca4c8 Light Blue
+        #e7b7b0 Peach Color
+        And again if they are accessible in dark mode.
+
+    Menu Bar Functionality
+        Ensures the menu bar is functional, responsive, and accessible through both mouse and keyboard navigation.
+            Ensure each item takes you even if its a empty page
+            to the correct html page.
+            Pages are.
+                Home
+                About
+                Schedule
+                Contact
+                More
+    
+    Dark Mode Switch
+        Ensures the dark mode switch effectively toggles the website between dark and light themes without affecting usability.
+        Make sure the text for Dark Mode is sitting correctly in comparison to where it opens at.
+
+3. Features to be Tested
+    Color contrast ratios against WCAG 2.1 Guidelines
+    Readability of text and visibility of UI elements in different color modes.
+    Menu bar visibility, interactivity, and navigation efficiency
+    Dark mode and light mode switching functionality and effect on website aesthetics and readability
+
+4. Features Not to Be Tested
+    Detailed functionality of linked pages from the menu bar items, except for their ability to be navigated to
+    Browser-specific color rendering, except for major browsers like Chrome, Firefox, Safari and Edge
+    User preferences saving for color modes across sessions (unless specified as a requirement)
+
+5. Approach
+    Tools and Techniques
+        Use automated tools for color contrast analysis (E.g. WebAIM Contrast Checker)
+        Manual testing with screen readers (e.g. NVDA JAWS) for accessibility verification
+        Browser developer tools for responsive design testing
+        Keyboard navigation to ensure accessibility for non-mouse users
+    Testing Types
+        Accessibility testing: To ensure the website meets accessibility standards
+        Functional Testing: To verify the menu bar and dark mode switch work as expected
+        Usability Testing: To assess the user experience in navigating the website and using its freatures
+
+6. Pass/Fail Criteria
+    Pass: The feature meets all outlined requirements, including WCAG 2.1 color contrast ratios, functional navigation through the menu and seamless switching between dark and light modes
+    Fail: The feature does not meet one or more of the outlined requirements, indicating issues with accessibility, functionality, or usability
+
+7. Testing Schedule
+    Preparation phase: Review of website design and requirements, setup of testing tools and environment
+    Execution Phase: Conducting test according to this plan, including automated and manual testing
+    Reporting Phase: Documentation of findings, reporting bugs/issues, and recommendations
+
+8. Deliverables
+    Testcases and scripts
+    Test results report, including bugs and issues found
+    Recommendations for improvements based on test findings
+
+9. Testing Environment
+    Website will be locally tested
+    Desktop Accessibility
+    Required sotfware tools for accessibility testing and screen reading
+
+10. Risks and Mitigations
+    Risk Inadequate tooling for comprehensive accessibility testing
+        Mitigation: Research and utilize a combination of the best available tools and manual testing practices
+    Risk: Changes in website design or functionality during Testing
+        Mitigation: Ensure close communication with the development team to stay informed of any changes. (I am the whole crew)
+
+11. Approval
+    Prepared by: Rick Jeane Owner
+    Reviewed by: Rick Jeane Owner
+    Approved by: Rick Jeane Owner

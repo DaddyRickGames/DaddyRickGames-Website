@@ -1,0 +1,69 @@
+Test Case ID: TC001
+
+Objective:
+    To ensure the website's color system is accessible to users with visual impairments, the menu bar is functional and easily navigable, and the dark mode switch works correctly, improving usability under different lighting conditions.
+
+Pre-requisites:
+    The tester must have access to a desktop with an internet connection.
+    Ensure the website is deployed in a testing environment accessible for QA testing.
+
+Test Steps:
+
+    Color System Accessibility:
+
+        Navigate to the homepage of the website.
+        Use a color contrast analyzer tool to measure the color contrast ratios of text against background colors across various sections of the website.
+        Verify that the color contrast ratios meet the WCAG 2.1 guidelines for minimum contrast (AA level: at least 4.5:1 for normal text and 3:1 for large text).
+
+    Menu Bar Functionality:
+
+        Locate the menu bar on the homepage.
+        Verify that the menu bar is visible at the top of the page on desktop.
+        Click on each item in the menu bar to ensure they are clickable and navigate to the correct section or page.
+        Test the menu bar navigation using keyboard controls (Tab for navigation, Enter for selection) to ensure it is accessible to users who cannot use a mouse.
+
+    Dark Mode Switch Functionality:
+
+        Locate the dark mode switch on the homepage it is the cogwheel icon.
+        Activate the dark mode switch and verify that the website's color scheme changes to dark mode, reducing brightness and improving visibility in low-light conditions.
+        Ensure that all text, icons, and UI elements are still clearly visible and that the color contrast is sufficient in dark mode.
+        Deactivate the dark mode switch and ensure the website returns to its original color scheme without any issues.
+        Test the dark mode switch functionality using both mouse and keyboard controls.
+
+Expected Results:
+    The color contrast ratios should meet the WCAG 2.1 guidelines for minimum contrast.
+    All menu bar items should be easily navigable, clickable, and lead to the correct sections or pages.
+    The dark mode switch should correctly toggle the website between dark and light themes, maintaining usability and accessibility in both modes.
+
+Actual Results:
+Color System Accessibility
+    Light blue on dark blue: Fail
+    White on Dark Blue: Pass
+    Black on Light Blue: Pass
+    White on Light Blue: Fail
+
+Menu Bar Functionality.
+    Hamburger Menu is showing on desktop.
+    Menu bar looks small
+    Dark mode settings cog is small
+    Each item only links back to the same spot on the current page.
+
+Dark Mode Functionality.
+    Need to change the text color
+
+
+Status: (Pass/Fail)
+    Color Accessibility overall Failed
+    Menu Bar: Failed
+    Menu bar keyboard accessibility: Passed
+    Dark Mode Functionality: Failed
+
+Notes:
+    Change the colors for dark mode the text to black on the light blue.
+    Keep the colors for light mode.
+
+    Menu bar needs to be a little bit bigger along with the text.
+    The links for each item needs to link to their pages respecfully so we need those pages place holders made
+    Remove the hamburger menu for desktop.
+
+    Dark Mode option needs to be in line with the check box.
