@@ -15,7 +15,7 @@ function includeHTML(callback) {
                     if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
                     /* Remove the attribute and call this function once more: */
                     elmnt.removeAttribute("getComponent");
-                    includeHTML();
+                    includeHTML(callback);
                 }
             }
             xhttp.open("GET", file, true);
