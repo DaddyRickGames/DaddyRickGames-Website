@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const settingsIcon = document.getElementById('accessibilitySettings');
     const darkModePanel = document.getElementById('darkModeSwitch');
 
-    if (darkModeSwitch) { // Ensure darkModeSwitch is not null
+    if (darkModeSwitch) { // Ensure darkModeSwitch is not null.
         // Check if dark mode was previously enabled
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark-mode');
