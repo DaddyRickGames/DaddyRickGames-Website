@@ -1,4 +1,4 @@
-function includeHTML() {
+function includeHTML(callback) {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all html elements: */
     z = document.getElementsByTagName("*");
@@ -24,4 +24,5 @@ function includeHTML() {
             return;
         }
     }
+    if (callback) callback(); // Call the callback when no more dynamic content is left to include.
 };
