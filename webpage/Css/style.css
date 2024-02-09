@@ -171,6 +171,83 @@ body.dark-mode section:nth-child(even) {
     color: #fff;
 }
 
+/* Footer Styles Adaptation for Dark Mode */
+body.dark-mode #site-footer {
+    background-color: var(--secondary-color); /* Light Blue for dark mode footer background */
+    color: var(--text-color); /* Ensure text remains white for contrast */
+}
+
+body.dark-mode #site-footer .footer-links a,
+body.dark-mode #site-footer .footer-social-media a {
+    color: var(--text-color); /* White text for links in dark mode for readability */
+}
+
+body.dark-mode .footer-copy {
+    color: var(--text-color); /* Ensure copyright text is also visible */
+}
+
+/* Optional: If you want to change link hover effects in dark mode */
+body.dark-mode #site-footer .footer-links a:hover,
+body.dark-mode #site-footer .footer-social-media a:hover {
+    color: var(--accent-color); /* Light Coral for hover state */
+}
+
+/* Footer Styles */
+#site-footer {
+    background-color: var(--primary-color); /* Using the primary color variable for consistency */
+    color: var(--text-color); /* White text color from the variable */
+    padding: 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+#site-footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+#site-footer .footer-content {
+    text-align: center;
+}
+
+#site-footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+#site-footer .footer-links li {
+    display: inline-block;
+    margin: 0 15px; /* Adjust based on your design preference */
+}
+
+#site-footer .footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#site-footer .footer-social-media {
+    margin-top: 20px;
+}
+
+#site-footer .footer-social-media a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#site-footer .footer-copy {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Ensure it spans the full width of the footer */
+    font-size: 0.8em; /* Smaller font size for copyright text */
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #menuBar ul {
