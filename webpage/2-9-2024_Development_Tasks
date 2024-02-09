@@ -1,0 +1,11 @@
+1. Fix navigation bar on each page.
+    Nav bar on the home page has shifted to the left, all the buttons need to be centered of the element.
+
+2. Fix navigation colors and layout for each page
+    Nav bar on all but the home.html page are drastically different than the home page
+
+3. Footer needs to be fixed
+    Footer is off centered on all pages.
+
+4. Accessibility cog/dark mode does not show up on any other page other than home.
+    Need to bring that element on to the nav bar.
