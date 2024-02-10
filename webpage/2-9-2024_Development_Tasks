@@ -4,8 +4,16 @@
 2. [x]Fix navigation colors and layout for each page
     Nav bar on all but the home.html page are drastically different than the home page
 
-3. []Footer needs to be fixed
+3. [x]Footer needs to be fixed
     Footer is off centered on all pages.
 
 4. [x]Accessibility cog/dark mode does not show up on any other page other than home.
     Need to bring that element on to the nav bar.
+
+5. []Create Comments for each breakpoint for responsiveness
+
+6. []Work on the second biggest Breakpoint
+
+7. []3rd Biggest breakpoint
+
+8. []4th Breakpoint

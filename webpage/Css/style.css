@@ -251,18 +251,75 @@ body.dark-mode #site-footer .footer-social-media a:hover {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    #menuBar ul {
+
+/* Max Width 599px Start */
+@media (max-width: 599px) {
+    #darkModeSwitch {
+        top: auto;
+        bottom: 10px;
+    }
+
+    .menuBar ul {
         flex-direction: column;
     }
 
     section {
-        width: 90%; /* Full width on smaller screens */
+        width:60%;
+    }
+
+    section:nth-child(even) {
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-left: 0%;
         transform: none; /* Remove stagger effect on smaller screens for readability */
+    }
+
+    section:nth-child(odd){
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-left: 0%;
+        transform: none;
+        margin-right: 0;
     }
 
     #darkModeSwitch {
         top: auto;
         bottom: 10px;
     }
+
+    #site-footer .footer-content {
+        padding-left: 10%;
+    }
+
+    #site-footer .footer-social-media {
+        padding-left: 36%;
+    }
+
+    #site-footer .footer-copy {
+        padding-left: 0;
+    }
+
+    .footer-content h3 {
+        color: white;
+    }
+}
+
+/* Min Width 600px Start */
+@media (min-width: 600px) {
+
+}
+
+/* Min Width 900px Start */
+@media (min-width: 900px) {
+
+}
+
+/* Min Width 1200px Start */
+@media (min-width: 1200px) {
+
+}
+
+/* Min Width 1800px */
+@media (min-width: 1800px) {
+
 }
