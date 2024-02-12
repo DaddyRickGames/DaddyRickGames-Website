@@ -261,25 +261,44 @@ body.dark-mode #site-footer .footer-social-media a:hover {
 
     .menuBar ul {
         flex-direction: column;
-    }
+    }   
 
     section {
         width:60%;
     }
 
-    section:nth-child(even) {
+    section:nth-child(even){
+        transform: none;
+        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-left: 0%;
+    }
+
+
+    section:nth-child(odd){
+        transform: none;
+        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-right: 0;
+    }
+
+    body.dark-mode section:nth-child(even) {
         padding-left: 15%;
         padding-right: 15%;
         margin-left: 0%;
         transform: none; /* Remove stagger effect on smaller screens for readability */
+        box-shadow: none;
     }
 
-    section:nth-child(odd){
+    body.dark-mode section:nth-child(odd){
         padding-left: 15%;
         padding-right: 15%;
         margin-left: 0%;
         transform: none;
         margin-right: 0;
+        box-shadow: none;
     }
 
     #darkModeSwitch {
