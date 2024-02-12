@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"442d360e1f3c41a0","x":-400,"y":-180,"width":250,"height":60,"type":"text","text":"Fix Dark Mode"},
+		{"id":"9fc1edf6c2435096","x":-125,"y":-30,"width":250,"height":70,"type":"text","text":"Create Pages"},
+		{"id":"8cedde825444b957","x":-125,"y":80,"width":250,"height":60,"type":"text","text":"Schedule.html"},
+		{"id":"7361bb7ffbeab191","x":140,"y":80,"width":250,"height":60,"type":"text","text":"About.html"},
+		{"id":"f6973f5a2dbc918e","x":-400,"y":80,"width":250,"height":60,"type":"text","text":"Games.html"},
+		{"id":"c316c35301609509","x":420,"y":80,"width":250,"height":60,"type":"text","text":"Projects.html"},
+		{"id":"7c9c770e4824d30a","x":-680,"y":80,"width":250,"height":60,"type":"text","text":"Stories.html"},
+		{"id":"06a0a80d26cce050","x":-250,"y":220,"width":250,"height":60,"type":"text","text":"Gallery"},
+		{"id":"c7d3b80785d054a4","x":40,"y":220,"width":250,"height":60,"type":"text","text":"Contact.html"},
+		{"id":"48116decca93aeb0","x":911,"y":118,"width":250,"height":60,"type":"text","text":"Add Images"}
+	],
+	"edges":[
+		{"id":"0b33fe7ceb62a6f0","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"8cedde825444b957","toSide":"top"},
+		{"id":"a2f211fa8c69e98e","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"f6973f5a2dbc918e","toSide":"top"},
+		{"id":"d955b521680b7a10","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"7361bb7ffbeab191","toSide":"top"},
+		{"id":"140988089eb0c4f0","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"c316c35301609509","toSide":"top"},
+		{"id":"229baae369ff2d97","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"7c9c770e4824d30a","toSide":"top"},
+		{"id":"26a3d4d1415ad9a9","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"06a0a80d26cce050","toSide":"top"},
+		{"id":"6599b8f5cafc49ce","fromNode":"9fc1edf6c2435096","fromSide":"bottom","toNode":"c7d3b80785d054a4","toSide":"top"}
+	]
+}
