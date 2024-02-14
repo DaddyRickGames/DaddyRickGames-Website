@@ -17,24 +17,24 @@ body {
     padding: 0;
 }
 
-body.darkmode p {
-    color: rgb(0, 0, 0);
+body.dark-mode p {
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    color: rgb(36, 33, 33);
+    color: var(--primary-color);
     text-align: center;
 }
 
 a, .accent {
     font-family: 'Merriweather', serif;
-    color: var(--accent-color);
+    color: white;
+    text-decoration: none;
 }
 
 /* Banner Styles */
-
 #banner img {
     width: 100%;
     height: auto;
@@ -68,78 +68,68 @@ a, .accent {
 }
 
 #accessibilitySettings i,
-#menuToggle i {
+#menuToggle i,
+#accessibilitySettings span {
     color: var(--text-color);
     cursor: pointer;
 }
 
-#accessibilitySettingsContainer {
-    position: relative; /* Container to hold both settings icon and the panel */
+#accessibilitySettingsContainer,
+#darkModeSwitch {
+    position: relative;
 }
 
 #accessibilitySettings {
-    cursor: pointer;
     display: flex;
-    align-items: center; /* Align icon and text */
+    align-items: center;
 }
 
 #accessibilitySettings i {
-    margin-right: 5px; /* Add some spacing between icon and text */
+    margin-right: 5px;
 }
 
-#accessibilitySettings span {
-    display: none; /* Hide the text by default */
-    color: var(--text-color);
-}
-
-#accessibilitySettings:hover span {
-    display: inline; /* Show text on hover */
+#accessibilitySettings:hover span,
+#darkModeSwitch {
+    display: inline;
 }
 
 #darkModeSwitch {
-    display: none; /* This will be shown when the cog is clicked */
-    position: absolute;
-    right: 0; /* Align the switch to the right side of the container */
-    top: 100%; /* Position it below the settings icon */
-    background-color: var(--primary-color);
-    padding: 5px;
+    display: none;
+    right: 25px;
+    top: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px;
     border-radius: 5px;
-    z-index: 10; /* Ensure it's above other content */
+    z-index: 10;
 }
 
 /* Section Layouts */
 main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center-align sections */
+    align-items: center;
     padding: 20px;
 }
 
 section {
-    width: 31%; /* Adjusted width for clear staggered effect */
+    width: 31%;
     margin: 20px 0;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 10px 25px;
     background-color: var(--text-color);
     color: var(--primary-color);
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    border-radius: 35px; /* Rounded corners */
+    transition: transform 0.3s ease;
+    border-radius: 35px;
+    box-shadow: 15px 20px 8px rgba(0, 0, 0, 0.1), -15px 20px 8px rgba(0,0,0,0.1);
 }
 
 section:nth-child(odd) {
-    padding-left: 50px;
-    padding-right: 25px;
-    transform: translateX(-5%); /* Slightly shift odd sections to the left */
+    transform: translateX(-5%);
     margin-right: 25%;
-    box-shadow: 10px 4px 8px rgba(0.5,0.5,0.5,0.5);
 }
 
 section:nth-child(even) {
-    padding-left: 50px;
-    padding-right: 25px;
-    transform: translateX(5%); /* Slightly shift even sections to the right */
+    transform: translateX(5%);
     margin-left: 25%;
-    box-shadow: -10px 4px 8px rgba(0.5,0.5,0.5,0.5);
 }
 
 /* Dark Mode Styles */
@@ -152,51 +142,24 @@ body.dark-mode #menuBar {
     background-color: var(--secondary-color);
 }
 
-body.dark-mode a {
-    color: var(--accent-color);
+body.dark-mode a,
+body.dark-mode section {
+    color: var(--text-color);
 }
 
 body.dark-mode section {
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5);
 }
 
-body.dark-mode section:nth-child(odd) {
-    box-shadow: 10px 10px 3px rgba(255, 255, 255, 0.4);
-}
-
-body.dark-mode section:nth-child(even) {
-    box-shadow: -10px 10px 3px rgba(255, 255, 255, 0.4);
-}
-.switch {
-    color: #fff;
-}
-
-/* Footer Styles Adaptation for Dark Mode */
-body.dark-mode #site-footer {
-    background-color: var(--secondary-color); /* Light Blue for dark mode footer background */
-    color: var(--text-color); /* Ensure text remains white for contrast */
-}
-
-body.dark-mode #site-footer .footer-links a,
-body.dark-mode #site-footer .footer-social-media a {
-    color: var(--text-color); /* White text for links in dark mode for readability */
-}
-
-body.dark-mode .footer-copy {
-    color: var(--text-color); /* Ensure copyright text is also visible */
-}
-
-/* Optional: If you want to change link hover effects in dark mode */
-body.dark-mode #site-footer .footer-links a:hover,
-body.dark-mode #site-footer .footer-social-media a:hover {
-    color: var(--accent-color); /* Light Coral for hover state */
+body.dark-mode #darkModeSwitch {
+    background-color: var(--primary-color);
 }
 
 /* Footer Styles */
 #site-footer {
-    background-color: var(--primary-color); /* Using the primary color variable for consistency */
-    color: var(--text-color); /* White text color from the variable */
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 20px 0;
     font-family: 'Lato', sans-serif;
 }
@@ -206,62 +169,23 @@ body.dark-mode #site-footer .footer-social-media a:hover {
     margin: auto;
     padding: 0 25px;
     display: flex;
-    /*flex-direction: row;*/ flex-direction: column;
-    /*justify-content: space-between;*/ justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap; /* Ensure responsiveness */
+    flex-wrap: wrap;
 }
 
-/*#site-footer .footer-content {
-    text-align: center;
-    padding-left: 35%;
-}*/
-
-#site-footer .footer-content, 
+#site-footer .footer-links,
 #site-footer .footer-social-media {
-    width: 100%; /* Ensure full width to center content on mobile */
-}
-
-#site-footer .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-#site-footer .footer-links li {
-    display: inline-block;
-    margin: 0 15px; /* Adjust based on your design preference */
-}
-
-
-/*#site-footer .footer-links a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-#site-footer .footer-social-media {
-    margin-top: 20px;
-}
-
+#site-footer .footer-links li,
 #site-footer .footer-social-media a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 10px;
-}*/
-
-/*#site-footer .footer-copy {
-    margin-top: 20px;
-    text-align: center;
-    width: 100%; 
-    font-size: 0.8em; 
-    padding-left: 6%;
-}*/
-
-#site-footer .footer-links a,
-#site-footer .footer-social-media a {
-    color: var(--text-color);
-    text-decoration: none;
     margin: 0 10px;
 }
 
@@ -271,7 +195,7 @@ body.dark-mode #site-footer .footer-social-media a:hover {
 }
 
 .footer-content h3 {
-    color: white;
+    color: var(--text-color);
 }
 
 
@@ -279,141 +203,44 @@ body.dark-mode #site-footer .footer-social-media a:hover {
 /* Responsive Design */
 
 /* Max Width 599px Start */
-@media (max-width: 599px) {
-    #darkModeSwitch {
-        top: auto;
-        bottom: 10px;
-    }
-
-    .menuBar ul {
-        flex-direction: column;
-    }   
-
+@media screen and (max-width: 599px) {
     section {
-        width:60%;
+        width: 75%;
     }
 
-    section:nth-child(even){
-        transform: none;
-        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
-    }
-
-
-    section:nth-child(odd){
-        transform: none;
-        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-right: 0;
-    }
-
-    body.dark-mode section:nth-child(even) {
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
-        transform: none; /* Remove stagger effect on smaller screens for readability */
-        box-shadow: none;
-    }
-
-    body.dark-mode section:nth-child(odd){
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
+    section:nth-child(odd) {
         transform: none;
         margin-right: 0;
-        box-shadow: none;
     }
-
-    #darkModeSwitch {
-        top: auto;
-        bottom: 10px;
-    }
-    /*
-    #site-footer .footer-content {
-        padding-left: 10%;
-    }
-
-    #site-footer .footer-social-media {
-        padding-left: 36%;
-    }*/
-
-    #site-footer .container {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #site-footer .footer-copy {
-        padding-left: 0;
-    }
-
-    .footer-content h3 {
-        color: white;
+    
+    section:nth-child(even) {
+        transform: none;
+        margin-left: 0;
     }
 }
 
 /* Min Width 600px Start */
-@media (min-width: 600px) {
-
+@media screen and (min-width: 600px) {
     section {
-        width:60%;
+        width: 75%;
     }
 
-    section:nth-child(even){
-        transform: none;
-        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
-    }
-
-
-    section:nth-child(odd){
-        transform: none;
-        box-shadow: 17px 17px 20px rgba(0, 0, 0, 0.4), -17px 17px 20px rgba(0,0,0,0.4);
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-right: 0;
-    }
-
-    body.dark-mode section:nth-child(even) {
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
-        transform: none; /* Remove stagger effect on smaller screens for readability */
-        box-shadow: none;
-    }
-
-    body.dark-mode section:nth-child(odd){
-        padding-left: 15%;
-        padding-right: 15%;
-        margin-left: 0%;
+    section:nth-child(odd) {
         transform: none;
         margin-right: 0;
-        box-shadow: none;
     }
-
-    #site-footer .container {
-        flex-direction: column;
-        justify-content: space-between;
+    
+    section:nth-child(even) {
+        transform: none;
+        margin-left: 0;
     }
-
-    #site-footer .footer-content, 
-    #site-footer .footer-social-media {
-        width: auto; /* Adjust width for tablet and above */
-    }
-
 }
 
 /* Min Width 900px Start */
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
 
     section{
-        width: 45%;
+        width: 75%;
     }
 
     #site-footer .footer-content {
@@ -426,16 +253,28 @@ body.dark-mode #site-footer .footer-social-media a:hover {
 }
 
 /* Min Width 1200px Start */
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     section {
-        width: 35%;
+        width: 55%;
+        transition: transform 0.3s ease;
+    }
+
+    section:nth-child(even) {
+        transform: translateX(5%);
+        margin-left: 25%;
+
+    }
+
+    section:nth-child(odd) {
+        transform: translateX(-5%);
+        margin-right: 25%;
     }
 }
 
 /* Min Width 1800px */
-@media (min-width: 1800px) {
+@media only screen and (min-width: 1800px) {
     section {
-        width: 31%; /* Adjusted width for clear staggered effect */
+        width: 60%; /* Adjusted width for clear staggered effect */
         margin: 20px 0;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -450,7 +289,6 @@ body.dark-mode #site-footer .footer-social-media a:hover {
         padding-right: 25px;
         transform: translateX(-5%); /* Slightly shift odd sections to the left */
         margin-right: 25%;
-        box-shadow: 10px 4px 8px rgba(0.5,0.5,0.5,0.5);
     }
     
     section:nth-child(even) {
@@ -458,6 +296,5 @@ body.dark-mode #site-footer .footer-social-media a:hover {
         padding-right: 25px;
         transform: translateX(5%); /* Slightly shift even sections to the right */
         margin-left: 25%;
-        box-shadow: -10px 4px 8px rgba(0.5,0.5,0.5,0.5);
     }
 }
